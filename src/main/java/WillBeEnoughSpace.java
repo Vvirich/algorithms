@@ -1,5 +1,9 @@
 public class WillBeEnoughSpace {
     public static int enough(int cap, int on, int wait){
-        return (on + wait) - cap;
+        int seats = on + wait;
+        if (seats <= cap) {
+            return 0;
+        }
+        return seats - cap;
     }
 }
